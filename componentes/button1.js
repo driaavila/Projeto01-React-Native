@@ -6,25 +6,24 @@ import {Text, Button, View} from 'react-native';
 class MeuObj extends React.Component{
 
     state={
-        corInicial: "green",
-        textoInicial: "Este texto está dentro de Meus Obejtos"
+        corInicial: "red",
+        textoInicial: "Botão 01"
     }
 
     pressionado = () => {
         this.setState({corInicial: 'orange'});
-        this.setState({textoInicial: 'alterado'})
+        this.setState({textoInicial: 'clicado'});
     }
 
     render(){
         return(
-            <View>
+            <View style={{ justifyContent:'center', flexDirection:'column', alignItems: 'center'}} >
                 <Button
-                title="botão novo"
+                title={this.state.textoInicial}
                 accessibilityLabel="texto alternativo"
                 color={this.state.corInicial}
-                onPress={this.pressionado}>
+                onPress={this.pressionado}>               
                 </Button>
-                <Text>{this.state.textoInicial}</Text>
             </View>
         );
     }
