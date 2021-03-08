@@ -17,7 +17,7 @@ class MeuObjeto extends React.Component{
 
     render(){
         return(
-            <View style={{ justifyContent:'space-around', alignItems: 'center' }}>
+            <View style={{flex:1, justifyContent: 'center', alignItems: 'center' }}>
                 <Button
                 title={this.state.textoInicial}
                 accessibilityLabel="texto alternativo"
