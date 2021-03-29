@@ -11,7 +11,7 @@ class MeuObj extends React.Component{
     }
 
     pressionado = () => {
-        this.setState({corInicial: 'orange'});
+        this.setState({corInicial: 'black'});
         this.setState({textoInicial: 'clicado'});
     }
 
